@@ -1,3 +1,4 @@
+import { SideMenuDirective } from './layout/side-menu/side-menu.directive';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +10,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 
 
 const appRoutes: Routes = [
-  { path: '', loadChildren: './../home/home.module#HomeModule' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './../home/home.module#HomeModule'}
 ];
 
@@ -24,8 +25,9 @@ const appRoutes: Routes = [
     TopBarComponent,
     SideMenuComponent,
     MainContentComponent,
-    FooterComponent
+    FooterComponent,
+    SideMenuDirective
   ],
-  exports: [ ]
+  exports: [ LayoutComponent ]
 })
 export class CoreModule { }

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.logo-mini>img{
+    width:50px;
+    height:50px;
+}
+.content-header>.breadcrumb{
+    float:none;
+    right:0px;
+    position:relative;
+    background-color:#d2d6de;
+    top:0px;
+}
+.skin-black .sidebar-menu > li:hover > a{
+    -webkit-transition: border-left-color 1s, color 1s, background-color 1s, border-left-width 2s;
+}
+.user-panel>.info{
+    line-height: 3;
+}

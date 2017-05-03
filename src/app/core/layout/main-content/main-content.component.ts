@@ -8,17 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
   
-  /* Layout variables */
-  layout: object = {
-    'page-header' : 'Titulo de la p&aacute;gina',
-    'page-description' : 'Descripci&oacute;n de la p&aacute;gina'
-  };
 
-
+  pathNames: Array<string>;
   constructor() { }
 
   ngOnInit() {
-   
+     this.pathNames = this.getPathNames(document.location.pathname=='/'? '/home' : document.location.pathname);
+  }
+
+  getPathNames(pathname : string): Array<string> {
+
+    let splitPath = pathname.split('/');
+    let arrayResult = [];
+
+    for( let i=1; i<splitPath.length; i++ ){
+      arrayResult[i-1] = splitPath[i];
+    }
+
+    return arrayResult;
+
   }
 
 }
