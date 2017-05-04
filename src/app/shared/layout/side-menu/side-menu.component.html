@@ -1,0 +1,40 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel">
+        <div class="pull-left image">
+            <img src="{{ user.avatar }}" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+            <p>{{ user.shortName }}</p>
+        </div>
+    </div>
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu" >
+        <!-- Options -->    
+        <li  *ngFor = " let option of menu ">
+            <a routerLink = "{{ option.path }}">
+                <i class="{{ option.icon }}" aria-hidden="true"></i> 
+                <span>{{ option.name }}</span>              
+                <span class="pull-right-container" *ngIf = " option.subOption.length > 0 " >
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <!-- Sub Options -->
+            <ul class="treeview-menu" >
+                <li *ngFor = " let suboption of option.subOption ">
+                    <a routerLink = "{{ suboption.path }}" >
+                        <i class="{{ suboption.icon }}" aria-hidden="true"></i>
+                        <span>{{ suboption.name }}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- / Options  -->
+    </ul>
+    <!-- /.sidebar-menu -->
+</section>
+<!-- /.sidebar -->
+</aside>

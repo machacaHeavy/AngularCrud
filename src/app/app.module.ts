@@ -1,16 +1,22 @@
+import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
-import { LayoutComponent } from './core/layout/layout.component';
-import { CoreModule } from './core/core.module';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CoreModule } from './core/core.module';
+import { LayoutComponent } from './core/layout/layout.component';
+import { NgModule } from '@angular/core';
+
+
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
-  declarations: [],
+  declarations: [  ],
   bootstrap: [ LayoutComponent ]
 })
 export class AppModule { }

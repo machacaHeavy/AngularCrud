@@ -1,3 +1,4 @@
+import { environment } from '../../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -13,7 +14,7 @@ export class MainContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-     this.pathNames = this.getPathNames(document.location.pathname=='/'? '/home' : document.location.pathname);
+     
   }
 
   getPathNames(pathname : string): Array<string> {

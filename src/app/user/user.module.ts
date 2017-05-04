@@ -3,20 +3,19 @@ import { LayoutComponent } from '../core/layout/layout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
+import { UserComponent } from './user.component';
 
-const homeRoutes: Routes = [
-  { path: '', component: HomeComponent }
+const userRoutes: Routes = [
+  { path: '', component: UserComponent }
 ];
-
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(homeRoutes),
+    RouterModule.forChild(userRoutes),
     SharedModule
   ],
-  declarations: [HomeComponent],
+  declarations: [UserComponent],
   bootstrap: [ LayoutComponent ]
 })
-export class HomeModule { }
+export class UserModule { }
