@@ -1,8 +1,8 @@
-import { LayoutComponent } from './../core/layout/layout.component';
-import { FooterComponent } from './../core/layout/footer/footer.component';
-import { MainContentComponent } from './../core/layout/main-content/main-content.component';
-import { SideMenuComponent } from './../core/layout/side-menu/side-menu.component';
-import { TopBarComponent } from './../core/layout/top-bar/top-bar.component';
+import { LayoutComponent } from './layout/layout.component';
+import { FooterComponent } from './layout/footer/footer.component';
+import { MainContentComponent } from './layout/main-content/main-content.component';
+import { SideMenuComponent } from './layout/side-menu/side-menu.component';
+import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,11 +11,11 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ],
   declarations: [
-    LayoutComponent,
     TopBarComponent,
     SideMenuComponent,
     MainContentComponent,
-    FooterComponent
+    FooterComponent,
+    LayoutComponent
   ],
   exports:[ LayoutComponent ]
 })

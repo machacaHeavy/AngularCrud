@@ -1,6 +1,4 @@
-import { environment } from '../../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
-
 
 @Component({
   selector: 'gs-main-content',
@@ -8,26 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class MainContentComponent implements OnInit {
-  
 
-  pathNames: Array<string>;
   constructor() { }
 
   ngOnInit() {
-     
-  }
-
-  getPathNames(pathname : string): Array<string> {
-
-    let splitPath = pathname.split('/');
-    let arrayResult = [];
-
-    for( let i=1; i<splitPath.length; i++ ){
-      arrayResult[i-1] = splitPath[i];
-    }
-
-    return arrayResult;
-
   }
 
 }

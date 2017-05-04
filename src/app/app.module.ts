@@ -1,11 +1,8 @@
+import { LayoutComponent } from './shared/layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { CoreModule } from './core/core.module';
-import { LayoutComponent } from './core/layout/layout.component';
 import { NgModule } from '@angular/core';
-
-
 
 
 
@@ -13,7 +10,6 @@ import { NgModule } from '@angular/core';
   imports: [
     CommonModule,
     BrowserModule,
-    CoreModule,
     SharedModule
   ],
   declarations: [  ],

@@ -1,5 +1,3 @@
-import { SharedModule } from '../shared/shared.module';
-import { LayoutComponent } from '../core/layout/layout.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -13,10 +11,8 @@ const homeRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(homeRoutes),
-    SharedModule
+    RouterModule.forChild(homeRoutes)
   ],
-  declarations: [HomeComponent],
-  bootstrap: [ LayoutComponent ]
+  declarations: [HomeComponent]
 })
 export class HomeModule { }

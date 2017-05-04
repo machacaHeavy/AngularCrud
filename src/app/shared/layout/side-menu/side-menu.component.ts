@@ -1,7 +1,4 @@
-import { InfoApi } from '../../../api/info.api';
-import { MenuApi } from './../../../api/menu.api';
 import { Component, OnInit } from '@angular/core';
-
 
 @Component({
   selector: 'gs-side-menu',
@@ -17,8 +14,8 @@ export class SideMenuComponent implements OnInit {
   constructor() {}
     
   ngOnInit() {
-    this.menu = MenuApi;
-    this.user = InfoApi;
+    this.menu = [];
+    this.user = [];
  
   }
 
