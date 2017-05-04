@@ -13,7 +13,8 @@
     </div>
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu" >
-        <!-- Options -->    
+        <!-- Options    
+        
         <li  *ngFor = " let option of menu ">
             <a routerLink = "{{ option.path }}">
                 <i class="{{ option.icon }}" aria-hidden="true"></i> 
@@ -22,7 +23,8 @@
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
-            <!-- Sub Options -->
+        -->
+            <!-- Sub Options
             <ul class="treeview-menu" >
                 <li *ngFor = " let suboption of option.subOption ">
                     <a routerLink = "{{ suboption.path }}" >
@@ -31,7 +33,9 @@
                     </a>
                 </li>
             </ul>
+            
         </li>
+        -->
         <!-- / Options  -->
     </ul>
     <!-- /.sidebar-menu -->
