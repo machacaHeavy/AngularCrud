@@ -4,11 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UserComponent } from './user.component';
 
 const userRoutes: Routes = [
-
-  { path: '', component: LayoutComponent, children: [
-    { path: '', component: UserComponent }
-  ]}
-
+  { path: '', component: UserComponent }
 ];
 
 @NgModule({

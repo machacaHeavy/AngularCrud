@@ -16,7 +16,6 @@ const appRoutes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(appRoutes)
-    
   ],
   declarations: [],
   exports: [ RouterModule ]
