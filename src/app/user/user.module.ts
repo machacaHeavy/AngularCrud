@@ -1,10 +1,27 @@
+import { ListComponent } from './list/list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserComponent } from './user.component';
+import { CreateComponent } from './create/create.component';
 
 const userRoutes: Routes = [
-  { path: '', component: UserComponent }
+  { 
+    path: '', 
+    children: [
+      { 
+        path: '',
+        component: ListComponent
+      },
+      { 
+        path: 'list', 
+        component: ListComponent 
+      },
+      {
+        path: 'create',
+        component: CreateComponent
+      }
+    ]  
+  }
 ];
 
 @NgModule({
@@ -12,6 +29,9 @@ const userRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(userRoutes)
   ],
-  declarations: [ UserComponent ]
+  declarations: [ 
+    ListComponent, 
+    CreateComponent 
+  ]
 })
 export class UserModule { }

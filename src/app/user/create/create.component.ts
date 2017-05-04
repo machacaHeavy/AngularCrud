@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'gs-user',
+  selector: 'gs-create',
   template: `
     <p>
-      user Works!
+      create Works!
     </p>
   `,
   styles: []
 })
-export class UserComponent implements OnInit {
+export class CreateComponent implements OnInit {
 
   constructor() { }
 

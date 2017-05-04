@@ -4,7 +4,16 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 
 const homeRoutes: Routes = [
-  { path: '', component: HomeComponent }
+  { 
+    path: '', 
+    pathMatch: 'full',
+    children: [
+      {
+        path: '',
+        component: HomeComponent
+      }
+    ] 
+  }
 ];
 
 
