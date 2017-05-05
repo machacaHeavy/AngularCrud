@@ -6,7 +6,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 
 
 const errorRoutes: Routes = [
-  { path: '', component: ErrorComponent, children: [
+  { path: '',  children: [
     { path: '', component: NotfoundComponent }
   ]}
 ];
@@ -16,7 +16,6 @@ const errorRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(errorRoutes)
   ],
-  declarations: [ErrorComponent, NotfoundComponent],
-  bootstrap: [ ErrorComponent ]
+  declarations: [ErrorComponent, NotfoundComponent]
 })
 export class ErrorModule { }

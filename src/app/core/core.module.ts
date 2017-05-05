@@ -15,10 +15,10 @@ import { CoreComponent } from './core.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: './../home/home.module#HomeModule'},
+  { path: 'home', component:LayoutComponent, loadChildren: './../home/home.module#HomeModule'},
   { path: 'user', loadChildren: './../user/user.module#UserModule'},
   { path: 'about', loadChildren: './../about/about.module#AboutModule'},
-  { path: 'error', loadChildren: './../error/error.module#ErrorModule', outlet:"errorOutlet"},
+  { path: 'error', loadChildren: './../error/error.module#ErrorModule' },
   { path: '**',  redirectTo: 'error'}
 ];
 
