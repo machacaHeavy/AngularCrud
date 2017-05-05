@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'gs-error',
-  template: '',
+  selector: 'gs-core',
+  template: '<router-outlet></router-outlet>',
   styles: []
 })
-export class ErrorComponent implements OnInit {
+export class CoreComponent implements OnInit {
 
   constructor() { }
 

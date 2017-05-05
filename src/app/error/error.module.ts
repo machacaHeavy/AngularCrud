@@ -16,6 +16,7 @@ const errorRoutes: Routes = [
     CommonModule,
     RouterModule.forChild(errorRoutes)
   ],
-  declarations: [ErrorComponent, NotfoundComponent]
+  declarations: [ErrorComponent, NotfoundComponent],
+  bootstrap: [ ErrorComponent ]
 })
 export class ErrorModule { }

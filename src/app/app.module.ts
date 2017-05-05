@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from './core/core.module';
-import { LayoutComponent } from './core/layout/layout.component';
+import { CoreComponent } from './core/core.component';
 
 
 @NgModule({
@@ -12,6 +12,6 @@ import { LayoutComponent } from './core/layout/layout.component';
     CoreModule
   ],
   declarations: [],
-  bootstrap: [ LayoutComponent ]
+  bootstrap: [ CoreComponent ]
 })
 export class AppModule { }
