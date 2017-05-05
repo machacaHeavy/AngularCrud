@@ -1,5 +1,5 @@
 import { slideInAnimation } from '../../core/layout/layout.animation';
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'gs-create',
@@ -9,8 +9,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  //@HostBinding('@routeAnimation') routeAnimation = true;
-  routeAnimation = true;
+  routeAnimation: boolean = true;
 
   constructor() { }
 

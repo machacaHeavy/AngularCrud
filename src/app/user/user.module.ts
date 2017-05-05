@@ -7,18 +7,15 @@ import { CreateComponent } from './create/create.component';
 
 const userRoutes: Routes = [
   { 
-    path: '', 
-    children: [
+    path: '', children: [
       { 
         path: ''
       },
       { 
-        path: 'list', 
-        component: ListComponent 
+        path: 'list', component: ListComponent 
       },
       {
-        path: 'create',
-        component: CreateComponent
+        path: 'create', component: CreateComponent
       }
     ]  
   }

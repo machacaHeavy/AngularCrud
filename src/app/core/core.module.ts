@@ -16,7 +16,8 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './../home/home.module#HomeModule'},
   { path: 'user', loadChildren: './../user/user.module#UserModule'},
-  { path: '**', redirectTo: 'home'}
+  { path: 'about', loadChildren: './../about/about.module#AboutModule'},
+  { path: '**',  loadChildren: './../notfound/notfound.module#NotfoundModule'}
 ];
 
 

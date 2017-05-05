@@ -8,8 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SideMenuComponent implements OnInit {
 
   /* Layout variables */
-  @Input() user = [];
-  @Input() menu = [];
+  @Input() user: any = {};
+  @Input() menu: Array<any> = [];
 
   constructor(){
   }

@@ -1,18 +1,17 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <section class="content-header" >
         <ol class="breadcrumb" >
-            <i class="fa fa-dashboard"></i> 
-            <li >
-                <a routerLink="/home" routerLinkActive="active">HOME</a>
+            <i class="fa fa-folder-open" aria-hidden="true"></i>
+            <li *ngFor = " let route of appRoutes ">
+                <span>{{ route | uppercase }}</span>
             </li>
         </ol>
     </section>
-    <div>{{hola}}</div>
     <!-- Main content -->
     <section class="content" >
-        
+ 
         <!-- Your Page Content Here -->
         <router-outlet></router-outlet>
 

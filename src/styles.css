@@ -7,8 +7,10 @@
     float:none;
     right:0px;
     position:relative;
-    background-color:#d2d6de;
+    background-color: rgba(0,0,0,0.02);
     top:0px;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:5px;
 }
 .skin-black .sidebar-menu > li:hover > a,
 .skin-blue .sidebar-menu > li:hover > a,
@@ -33,4 +35,9 @@
 .sidebar-menu li {
     outline: none;
     border: none;
+}
+.content-header>.breadcrumb>li+li:before{
+    content: "/\A0" !important;
+    color: gray !important;
+   
 }

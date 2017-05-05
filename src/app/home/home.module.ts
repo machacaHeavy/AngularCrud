@@ -5,12 +5,9 @@ import { HomeComponent } from './home.component';
 
 const homeRoutes: Routes = [
   { 
-    path: '', 
-    pathMatch: 'full',
-    children: [
+    path: '', children: [
       {
-        path: '',
-        component: HomeComponent
+        path: '', component: HomeComponent
       }
     ] 
   }

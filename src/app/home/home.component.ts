@@ -1,12 +1,12 @@
 import { fadeInAnimation, slideInAnimation } from '../core/layout/layout.animation';
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 
 @Component({
   selector: 'gs-home',
   template: `
-  <div [@routeAnimation] = "routeAnimation">
+  <div class="home-container" [@routeAnimation] = "routeAnimation">
     <div class="jumbotron">
       <div class="container">
         <h1>Lorem ipsum</h1>
@@ -16,18 +16,18 @@ import { Router } from '@angular/router';
     </div>
   </div>
   `,
-  styles: [],
+  styles: [
+    '.home-container{ max-width:800px; margin:0px auto; padding:15px; }'
+  ],
   animations: [ fadeInAnimation ]
 })
 export class HomeComponent implements OnInit {
 
-  //@HostBinding('@routeAnimation') routeAnimation = true;
   routeAnimation = true;
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit() {
-
   }
 
 

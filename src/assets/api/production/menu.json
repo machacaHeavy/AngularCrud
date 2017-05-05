@@ -24,7 +24,7 @@
      },
      {
       "name": "About",
-      "path": "/user",
+      "path": "/about",
       "icon": "fa fa-info",
       "subOption": []
      }

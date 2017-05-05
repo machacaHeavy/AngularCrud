@@ -1,6 +1,6 @@
 import { UserService } from '../user.service';
 import { fadeInAnimation, slideInAnimation } from '../../core/layout/layout.animation';
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'gs-list',
@@ -13,14 +13,13 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  //@HostBinding('@routeAnimation') routeAnimation = true;
-  routeAnimation = true;
-  list = [];
+  routeAnimation: boolean = true;
+  list: any = {};
 
-  constructor(private us: UserService) { }
+  constructor(private us: UserService){ }
 
   ngOnInit() {
-    this.getList();
+    this.getList();   
   }
   
   private getList(){
