@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'gs-footer',
@@ -8,10 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   /* Footer variables */
-  footer: any = {
-    autor : 'José Gildardo Solis Sánchez',
-    anio  : '2017'
-  };
+  @Input() footer = [];
 
   constructor() { }
 

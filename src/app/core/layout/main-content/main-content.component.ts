@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { LayoutComponent } from '../layout.component';
+import { Component, OnInit, Input } from '@angular/core';
+
+
 
 @Component({
   selector: 'gs-main-content',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
-  constructor() { }
+  constructor(){}
 
   ngOnInit() {
   }

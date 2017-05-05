@@ -5,8 +5,8 @@
 
 export const environment = {
   production: false,
-  restApi: {
-    usersResource : 'http://localhost/slim-eloquent/user'
-  }
+  infoResource: './../../../assets/api/development/info.json',
+  menuResource: './../../../assets/api/development/menu.json',
+  usersResource: 'http://localhost/slim-eloquent/user'
 };
 

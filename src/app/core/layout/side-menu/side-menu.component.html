@@ -13,21 +13,21 @@
     </div>
     <!-- Sidebar Menu -->
     <ul class="sidebar-menu" >
-        <!-- Options    
+        <!-- Options -->   
         
         <li  *ngFor = " let option of menu ">
-            <a routerLink = "{{ option.path }}">
+            <a routerLink = "{{ option.path }}" routerLinkActive="active">
                 <i class="{{ option.icon }}" aria-hidden="true"></i> 
                 <span>{{ option.name }}</span>              
                 <span class="pull-right-container" *ngIf = " option.subOption.length > 0 " >
                     <i class="fa fa-angle-left pull-right"></i>
                 </span>
             </a>
-        -->
-            <!-- Sub Options
+        
+            <!-- Sub Options -->
             <ul class="treeview-menu" >
                 <li *ngFor = " let suboption of option.subOption ">
-                    <a routerLink = "{{ suboption.path }}" >
+                    <a routerLink = "{{ suboption.path }}" routerLinkActive="active">
                         <i class="{{ suboption.icon }}" aria-hidden="true"></i>
                         <span>{{ suboption.name }}</span>
                     </a>
@@ -35,7 +35,7 @@
             </ul>
             
         </li>
-        -->
+        
         <!-- / Options  -->
     </ul>
     <!-- /.sidebar-menu -->

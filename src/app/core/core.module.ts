@@ -1,3 +1,6 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpModule } from '@angular/http';
+import { LayoutService } from './layout/layout.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,7 +23,9 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     TopBarComponent,
@@ -29,6 +34,7 @@ const appRoutes: Routes = [
     FooterComponent,
     LayoutComponent
   ],
+  providers: [ LayoutService],
   exports: [ LayoutComponent ]
 
 })

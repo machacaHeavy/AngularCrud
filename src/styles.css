@@ -10,9 +10,27 @@
     background-color:#d2d6de;
     top:0px;
 }
-.skin-black .sidebar-menu > li:hover > a{
-    -webkit-transition: border-left-color 1s, color 1s, background-color 1s, border-left-width 2s;
+.skin-black .sidebar-menu > li:hover > a,
+.skin-blue .sidebar-menu > li:hover > a,
+.skin-yellow .sidebar-menu > li:hover > a,
+.skin-red .sidebar-menu > li:hover > a,
+.skin-green .sidebar-menu > li:hover > a,
+.skin-purple .sidebar-menu > li:hover > a{
+    -webkit-transition: border-left-color 1s, color 1s, border-left-width 1s;
 }
 .user-panel>.info{
     line-height: 3;
+}
+.user-header-name-role{
+    font-size: 12px !important;
+}
+.navbar-nav>.user-menu>.dropdown-menu{
+    width: 300px !important;
+}
+.navbar-nav>.user-menu>.dropdown-menu>li.user-header{
+    height: 220px !important;
+}
+.sidebar-menu li {
+    outline: none;
+    border: none;
 }

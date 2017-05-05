@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'gs-side-menu',
@@ -8,15 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class SideMenuComponent implements OnInit {
 
   /* Layout variables */
-  user: any;
-  menu: any;
+  @Input() user = [];
+  @Input() menu = [];
 
-  constructor() {}
-    
+  constructor(){
+  }
+
   ngOnInit() {
-    this.menu = [];
-    this.user = [];
- 
+    
   }
 
 

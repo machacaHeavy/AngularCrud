@@ -1,3 +1,4 @@
+import { UserService } from './user.service';
 import { ListComponent } from './list/list.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -9,8 +10,7 @@ const userRoutes: Routes = [
     path: '', 
     children: [
       { 
-        path: '',
-        component: ListComponent
+        path: ''
       },
       { 
         path: 'list', 
@@ -32,6 +32,7 @@ const userRoutes: Routes = [
   declarations: [ 
     ListComponent, 
     CreateComponent 
-  ]
+  ],
+  providers: [ UserService ]
 })
 export class UserModule { }
