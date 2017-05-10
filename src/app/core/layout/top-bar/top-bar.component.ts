@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { LoginService } from '../../../login/login.service';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -9,9 +11,14 @@ export class TopBarComponent implements OnInit {
 
   @Input() user: any = {};
 
-  constructor() { }
+  constructor(private login: LoginService, private router: Router) { }
 
   ngOnInit() {
+  }
+  
+  logOut(){
+    this.login.logOut();
+    this.router.navigate(['/login']);
   }
 
 }

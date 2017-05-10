@@ -1,3 +1,7 @@
+import { IntegerDirective } from '../shared/directives/integer.directive';
+import { AlphanumericDirective } from '../shared/directives/alphanumeric.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthGuard } from '../shared/guards/auth.guard';
 import { UserService } from './user.service';
 import { ListComponent } from './list/list.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,7 +11,7 @@ import { CreateComponent } from './create/create.component';
 
 const userRoutes: Routes = [
   { 
-    path: '', children: [
+    path: '', canActivate:[AuthGuard], children: [
       { 
         path: ''
       },
@@ -24,12 +28,15 @@ const userRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(userRoutes)
+    RouterModule.forChild(userRoutes),
+    ReactiveFormsModule
   ],
   declarations: [ 
     ListComponent, 
-    CreateComponent 
+    CreateComponent,
+    AlphanumericDirective,
+    IntegerDirective
   ],
-  providers: [ UserService ]
+  providers: [ UserService, AuthGuard ]
 })
 export class UserModule { }

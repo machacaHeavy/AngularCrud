@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
-  selector: 'gs-notfound',
+  selector: 'gs-app',
   template: `
-    <p>
-      notfound Works!
-    </p>
+    <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [``]
 })
-export class NotfoundComponent implements OnInit {
+export class AppComponent implements OnInit {
 
   constructor() { }
 

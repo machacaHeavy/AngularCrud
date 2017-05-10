@@ -1,5 +1,5 @@
 import { UserService } from '../user.service';
-import { fadeInAnimation, slideInAnimation } from '../../core/layout/layout.animation';
+import { slideInAnimation } from '../../shared/animations/slide-in.animation';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

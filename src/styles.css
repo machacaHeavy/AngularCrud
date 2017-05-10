@@ -41,3 +41,11 @@
     color: gray !important;
    
 }
+.has-error{
+    border-color: #E23237;
+    background-color: rgba(244, 66, 66,0.1);
+    
+}
+.has-error:focus{
+    border-color: #E23237;
+}

@@ -15,8 +15,8 @@
     <ul class="sidebar-menu" >
         <!-- Options -->   
         
-        <li  *ngFor = " let option of menu ">
-            <a routerLink = "{{ option.path }}" routerLinkActive="active">
+        <li  *ngFor = " let option of menu " [ngClass]="{treeview: option.subOption.length > 0}" routerLinkActive="active">
+            <a routerLink = "{{ option.path }}" >
                 <i class="{{ option.icon }}" aria-hidden="true"></i> 
                 <span>{{ option.name }}</span>              
                 <span class="pull-right-container" *ngIf = " option.subOption.length > 0 " >
@@ -25,9 +25,9 @@
             </a>
         
             <!-- Sub Options -->
-            <ul class="treeview-menu" >
-                <li *ngFor = " let suboption of option.subOption ">
-                    <a routerLink = "{{ suboption.path }}" routerLinkActive="active">
+            <ul class="treeview-menu" *ngIf=" option.subOption.length > 0 ">
+                <li *ngFor = " let suboption of option.subOption " routerLinkActive="active">
+                    <a routerLink = "{{ suboption.path }}" >
                         <i class="{{ suboption.icon }}" aria-hidden="true"></i>
                         <span>{{ suboption.name }}</span>
                     </a>

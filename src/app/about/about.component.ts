@@ -1,4 +1,4 @@
-import { fadeInAnimation } from '../core/layout/layout.animation';
+import { fadeInAnimation } from '../shared/animations/fade-in.animation';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

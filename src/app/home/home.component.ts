@@ -1,4 +1,4 @@
-import { fadeInAnimation, slideInAnimation } from '../core/layout/layout.animation';
+import { fadeInAnimation } from '../shared/animations/fade-in.animation';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
   </div>
   `,
   styles: [
-    '.home-container{ max-width:800px; margin:0px auto; padding:15px; }'
+    '.home-container{ max-width:800px; margin:0px auto; padding:15px; height:auto; }'
   ],
   animations: [ fadeInAnimation ]
 })

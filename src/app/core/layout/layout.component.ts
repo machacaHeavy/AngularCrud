@@ -1,16 +1,17 @@
 import { LayoutService } from './layout.service';
 import { Component, OnInit } from '@angular/core';
 
+declare var $:any;
 
 @Component({
   selector: 'gs-layout',
   template: `
-    <div class="wrapper" >
+  
       <gs-top-bar [user] = "info"></gs-top-bar>
       <gs-side-menu [user] = "info" [menu] = "menu"></gs-side-menu>
       <gs-main-content></gs-main-content>
       <gs-footer [footer] = "info"></gs-footer>
-    </div>
+  
   `,
   styles: []
 })
@@ -18,10 +19,11 @@ export class LayoutComponent implements OnInit{
   
   info: any = {};
   menu: Array<any> = [];
-
+  
   constructor(private ls: LayoutService) {}
 
   ngOnInit(){
+      $.AdminLTE.layout.activate();
       this.getInfo();
       this.getMenu();
   }
