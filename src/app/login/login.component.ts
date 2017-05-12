@@ -1,8 +1,8 @@
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from './login.service';
-import { Component, OnInit } from '@angular/core';
 
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'gs-login',
@@ -17,16 +17,15 @@ import { Component, OnInit } from '@angular/core';
       border:1px solid rgba(0,0,0,0.1);
       border-radius:5px;
     }
-    
   `]
 })
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  formErrors = {
+  formErrors: any = {
     'user' : ''
   };
-  validationMessages = {
+  validationMessages: any = {
     'user' : {
       'required' : 'El usuario es requerido',
       'maxlength' : 'El usuario debe tener máximo 15 caracteres'

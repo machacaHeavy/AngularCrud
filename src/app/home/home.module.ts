@@ -1,26 +1,14 @@
-import { AuthGuard } from '../shared/guards/auth.guard';
-import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { HomeRoutingModule } from './home-routing.module';
+import { SharedModule } from '../shared/shared.module';
+
 import { HomeComponent } from './home.component';
-
-const homeRoutes: Routes = [
-  { 
-    path: '', canActivate: [AuthGuard],  children: [
-      {
-        path: '', component: HomeComponent
-      }
-    ] 
-  }
-];
-
+import { AuthGuard } from './../shared/guards/auth.guard';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(homeRoutes)
-  ],
+  imports: [ SharedModule, HomeRoutingModule ],
   providers: [ AuthGuard ],
-  declarations: [HomeComponent]
+  declarations: [ HomeComponent ]
 })
-export class HomeModule { }
+export class HomeModule {}

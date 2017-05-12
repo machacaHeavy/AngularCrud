@@ -1,16 +1,19 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { StringDirective } from './directives/string.directive';
-import { IntegerDirective } from './directives/integer.directive';
 import { AlphanumericDirective } from './directives/alphanumeric.directive';
-
+import { IntegerDirective } from './directives/integer.directive';
+import { StringDirective } from './directives/string.directive';
 
 @NgModule({
   imports: [
+    BrowserAnimationsModule,
     CommonModule,
     ReactiveFormsModule,
+    HttpModule
   ],
   declarations: [
     AlphanumericDirective,
@@ -18,11 +21,13 @@ import { AlphanumericDirective } from './directives/alphanumeric.directive';
     StringDirective
   ],
   exports: [
+    BrowserAnimationsModule,
     CommonModule,
+    HttpModule,
     ReactiveFormsModule,
     AlphanumericDirective,
     IntegerDirective,
     StringDirective
   ]
 })
-export class SharedModule { }
+export class SharedModule {}

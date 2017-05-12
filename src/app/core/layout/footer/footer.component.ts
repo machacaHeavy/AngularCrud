@@ -2,12 +2,10 @@ import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'gs-footer',
-  templateUrl: './footer.component.html',
-  styles: []
+  templateUrl: './footer.component.html'
 })
 export class FooterComponent implements OnInit {
 
-  /* Footer variables */
   @Input() footer: any = {};
 
   constructor() { }

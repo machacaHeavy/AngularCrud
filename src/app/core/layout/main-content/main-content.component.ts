@@ -1,12 +1,13 @@
-import { Router, NavigationEnd } from '@angular/router';
-import { LayoutComponent } from '../layout.component';
 import { Component, OnInit} from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+
+import { LayoutComponent } from '../layout.component';
+
 
 
 @Component({
   selector: 'gs-main-content',
-  templateUrl: './main-content.component.html',
-  styles: []
+  templateUrl: './main-content.component.html'
 })
 export class MainContentComponent implements OnInit {
 
@@ -30,7 +31,7 @@ export class MainContentComponent implements OnInit {
 
   private routesToArray(url: string): Array<string>{
       
-      let arrayUrl = <string[]> url.split('/');
+      let arrayUrl    = <string[]> url.split('/');
       let arrayResult = <string[]> [];
       for( let i = 1; i < arrayUrl.length; i++ ){
 
@@ -41,7 +42,6 @@ export class MainContentComponent implements OnInit {
       }
 
       return arrayResult;
-
   }
 
 }

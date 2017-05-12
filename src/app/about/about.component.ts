@@ -1,5 +1,7 @@
-import { fadeInAnimation } from '../shared/animations/fade-in.animation';
 import { Component, OnInit } from '@angular/core';
+
+import { fadeInAnimation } from './../shared/animations';
+
 
 @Component({
   selector: 'gs-about',
@@ -14,9 +16,7 @@ import { Component, OnInit } from '@angular/core';
       </div>
     </div>
   `,
-  styles: [
-    '.about-container{ max-width:800px; margin:0px auto; padding:15px; }'
-  ],
+  styles: [` .about-container{ max-width:800px; margin:0px auto; padding:15px; } `],
   animations: [ fadeInAnimation ]
 })
 export class AboutComponent implements OnInit {

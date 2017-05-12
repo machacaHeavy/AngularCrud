@@ -1,26 +1,24 @@
-import { LayoutService } from './layout.service';
 import { Component, OnInit } from '@angular/core';
+
+import { LayoutService } from './layout.service';
 
 declare var $:any;
 
 @Component({
   selector: 'gs-layout',
   template: `
-  
       <gs-top-bar [user] = "info"></gs-top-bar>
       <gs-side-menu [user] = "info" [menu] = "menu"></gs-side-menu>
       <gs-main-content></gs-main-content>
-      <gs-footer [footer] = "info"></gs-footer>
-  
-  `,
-  styles: []
+      <gs-footer [footer] = "info"></gs-footer> 
+  `
 })
 export class LayoutComponent implements OnInit{
   
   info: any = {};
   menu: Array<any> = [];
   
-  constructor(private ls: LayoutService) { console.log('LayoutComponent instance...')}
+  constructor(private ls: LayoutService){ console.log('LayoutComponent instance...'); }
 
   ngOnInit(){
       $.AdminLTE.layout.activate();
@@ -41,7 +39,5 @@ export class LayoutComponent implements OnInit{
       (menuResponseError)   => console.log(menuResponseError)
     );
   }
-
-
 
 }

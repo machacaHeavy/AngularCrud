@@ -1,22 +1,14 @@
-import { AuthGuard } from '../shared/guards/auth.guard';
-import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { AboutRoutingModule } from './about-routing.module';
+import { SharedModule } from './../shared/shared.module';
+
 import { AboutComponent } from './about.component';
-
-
-const aboutRoutes: Routes = [
-  { path: '', canActivate:[AuthGuard], children:[
-    { path: '', component: AboutComponent }
-  ] }
-];
+import { AuthGuard } from './../shared/guards/auth.guard';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterModule.forChild(aboutRoutes)
-  ],
-  providers: [AuthGuard],
-  declarations: [AboutComponent]
+  imports: [ SharedModule, AboutRoutingModule ],
+  providers: [ AuthGuard ],
+  declarations: [ AboutComponent ]
 })
-export class AboutModule { }
+export class AboutModule {}

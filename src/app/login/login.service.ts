@@ -6,18 +6,18 @@ export class LoginService {
   constructor() { }
 
   loggIn(user){
-    localStorage.setItem('id', user);
+    localStorage.setItem('id_session', user);
     
   }
 
   logOut(){
-    localStorage.removeItem('id');
+    localStorage.removeItem('id_session');
     localStorage.clear();
   }
 
   isLoggedIn(){
     
-    if ( localStorage.getItem('id') != null && localStorage.getItem('id') != '' )
+    if ( localStorage.getItem('id_session') != null && localStorage.getItem('id_session') != '' )
     {
       return true;
     }
