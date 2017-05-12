@@ -1,16 +1,15 @@
-import { fadeInAnimation } from '../shared/animations/fade-in.animation';
 import { Component, OnInit } from '@angular/core';
+
+import { fadeInAnimation } from './../shared/animations';
 
 @Component({
   selector: 'gs-notfound',
   template: `
-  <div class="notfound-container" [@routeAnimation] = "routeAnimation">
-
-        <h1>No Encontrado</h1>
-        <p>La p&aacute;gina solicitada no existe</p>
-        <button routerLink="/home" class="btn btn-warning btn-sm">Regresar</button>
-
-  </div>
+    <div class="notfound-container" [@routeAnimation] = "routeAnimation">
+          <h1>No Encontrado</h1>
+          <p>La p&aacute;gina solicitada no existe</p>
+          <button routerLink="/home" class="btn btn-warning btn-sm">Regresar</button>
+    </div>
   `,
   styles: [`
     .notfound-container{

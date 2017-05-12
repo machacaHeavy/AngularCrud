@@ -1,17 +1,18 @@
-import { User } from '../user.model';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { slideInAnimation } from '../../shared/animations/slide-in.animation';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
+
+import { User } from './../user.model';
+import { slideInAnimation } from './../../shared/animations';
 
 declare var $:any;
 
 @Component({
   selector: 'gs-create',
   templateUrl: './create2.component.html',
-  styles: [ 
-    '.create-container{ max-width:500px; padding:20px; border-radius:5px; margin:0px auto; background-color:rgba(255,255,255,0.5); border:1px solid rgba(0,0,0,0.1); }',
-    '.create-container h4{ color:rgba(0,0,0,0.6); }'  
-   ],
+  styles: [`
+    .create-container{ max-width:500px; padding:20px; border-radius:5px; margin:0px auto; background-color:rgba(255,255,255,0.5); border:1px solid rgba(0,0,0,0.1); }
+    .create-container h4{ color:rgba(0,0,0,0.6); }
+   `],
   animations: [ slideInAnimation ]
 })
 export class CreateComponent implements OnInit {

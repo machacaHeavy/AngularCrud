@@ -10,7 +10,7 @@ const homeRoutes: Routes = [
     children: [
       { path: '', component: HomeComponent }
     ],
-    canActivate: [AuthGuard]
+    canActivate: [ AuthGuard ]
   }
 ];
 

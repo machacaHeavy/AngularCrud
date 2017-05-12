@@ -1,4 +1,3 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -10,7 +9,6 @@ import { StringDirective } from './directives/string.directive';
 
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
     CommonModule,
     ReactiveFormsModule,
     HttpModule
@@ -21,7 +19,6 @@ import { StringDirective } from './directives/string.directive';
     StringDirective
   ],
   exports: [
-    BrowserAnimationsModule,
     CommonModule,
     HttpModule,
     ReactiveFormsModule,

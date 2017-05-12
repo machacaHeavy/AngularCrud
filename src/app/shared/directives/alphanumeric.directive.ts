@@ -5,14 +5,14 @@ import { Directive, HostListener } from '@angular/core';
 })
 export class AlphanumericDirective{
 
-    ALPHANUMERIC_REGEXP: RegExp = new RegExp('^[0-9a-zA-Z]+$');
+    alphanumericRexExp: RegExp = new RegExp('^[0-9a-zA-Z]+$');
 
     constructor(){
 
     }
 
     @HostListener('keypress', ['$event']) onkeypress(event:KeyboardEvent){
-        return this.ALPHANUMERIC_REGEXP.test(event.key);
+        return this.alphanumericRexExp.test(event.key);
     }  
 
 }

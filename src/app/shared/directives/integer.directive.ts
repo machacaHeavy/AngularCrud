@@ -5,14 +5,14 @@ import { Directive, HostListener } from '@angular/core';
 })
 export class IntegerDirective{
 
-    INTEGER_REGEXP: RegExp = new RegExp('^[0-9]+$');
+    integerRegExp: RegExp = new RegExp('^[0-9]+$');
 
     constructor(){
 
     }
 
     @HostListener('keypress', ['$event']) onkeypress(event:KeyboardEvent){
-        return this.INTEGER_REGEXP.test(event.key);
+        return this.integerRegExp.test(event.key);
     }  
 
 }

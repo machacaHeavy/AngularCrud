@@ -1,7 +1,7 @@
-import { fadeInAnimation } from '../shared/animations/fade-in.animation';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { fadeInAnimation } from './../shared/animations';
 
 @Component({
   selector: 'gs-home',
