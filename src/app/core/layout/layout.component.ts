@@ -20,7 +20,7 @@ export class LayoutComponent implements OnInit{
   info: any = {};
   menu: Array<any> = [];
   
-  constructor(private ls: LayoutService) {}
+  constructor(private ls: LayoutService) { console.log('LayoutComponent instance...')}
 
   ngOnInit(){
       $.AdminLTE.layout.activate();

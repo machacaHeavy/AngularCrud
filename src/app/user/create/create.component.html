@@ -3,21 +3,22 @@
         <div class="form-group">
             <h4>Crear Usuario</h4>
         </div>
-        <div class="input-group">
+        <div class="input-group input-group-custom">
             <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
             <input type="text" class="form-control" placeholder="Introduzca su usuario" autocomplete="off" formControlName="user" [ngClass]="{'has-error': um.validations.user}" gs-alphanumeric>
         </div>
-        <small *ngIf="formErrors.user">{{ formErrors.user }}</small>
+        <small *ngIf="formErrors.user" class="smallMessage">{{ formErrors.user }}</small>
         <div class="input-group">
             <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
             <input type="text" class="form-control" placeholder="Introduzca su email" autocomplete="off" formControlName="email" [ngClass]="{'has-error': um.validations.email}">
+            
         </div>
-        <small *ngIf="formErrors.email">{{ formErrors.email }}</small>
+        <small *ngIf="formErrors.email" class="smallMessage">{{ formErrors.email }}</small>
         <div class="input-group">
             <div class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></div>
             <input type="text" class="form-control" placeholder="Introduzca su teléfono" autocomplete="off" formControlName="tel" [ngClass]="{'has-error': um.validations.tel}" gs-integer maxlength="10">
         </div>
-        <small *ngIf="formErrors.tel">{{ formErrors.tel }}</small>
+        <small *ngIf="formErrors.tel" class="smallMessage">{{ formErrors.tel }}</small>
         <br>
         <div class="form-group text-right">
             <button type="button" class="btn btn-default" routerLink="/home">Cancelar</button>

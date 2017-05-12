@@ -1,0 +1,43 @@
+<div class="create-container gs-flat gs-shadow" [@routeAnimation]="routeAnimation">
+    <form role="form" [formGroup]="createForm">
+        <div class="form-group text-center">
+            <h4>Crear Usuario</h4>
+        </div>
+        <br>
+        <div class="gs-input-group"> 
+            <input type="text" class="form-control gs-input-underscored" formControlName="user" id="user" [ngClass]="{'gs-has-error': um.validations.user}" autocomplete="off" gs-alphanumeric>
+            <label class="gs-label-underscored" (click)="validateLabel('user')" [ngClass]="{'gs-input-underscored-focused': userLabel, 'gs-error': um.validations.user}">Usuario</label>
+            <i class="gs-icon-left glyphicon glyphicon-user" aria-hidden="true" [ngClass]="{'gs-error': um.validations.user}"></i>
+            <i class="gs-icon-right glyphicon glyphicon-ok" aria-hidden="true" *ngIf="showUserOk"></i>
+            <i class="gs-icon-right glyphicon glyphicon-remove" aria-hidden="true" *ngIf="showUserRemove"></i>
+            <small class="gs-span-underscored" *ngIf="formErrors.user">{{ formErrors.user }}</small>
+        </div>
+        <br>
+        <div class="gs-input-group">
+            <input type="text" class="form-control gs-input-underscored" formControlName="email" id="email" [ngClass]="{'gs-has-error': um.validations.email}" autocomplete="off">
+            <label class="gs-label-underscored" (click)="validateLabel('email')" [ngClass]="{'gs-input-underscored-focused': emailLabel, 'gs-error': um.validations.email}">Email</label>
+            <i class="gs-icon-left glyphicon glyphicon-envelope" aria-hidden="true" [ngClass]="{'gs-error': um.validations.email}"></i>
+            <i class="gs-icon-right glyphicon glyphicon-ok" aria-hidden="true" *ngIf="showEmailOk"></i>
+            <i class="gs-icon-right glyphicon glyphicon-remove" aria-hidden="true" *ngIf="showEmailRemove"></i>
+            <small class="gs-span-underscored" *ngIf="formErrors.email">{{ formErrors.email }}</small>
+        </div>
+        <br>
+        <div class="gs-input-group">
+            <input type="text" class="form-control gs-input-underscored" formControlName="tel" id="tel" [ngClass]="{'gs-has-error': um.validations.tel}" autocomplete="off" gs-integer>
+            <label class="gs-label-underscored" (click)="validateLabel('tel')" [ngClass]="{'gs-input-underscored-focused': telLabel, 'gs-error': um.validations.tel }">Teléfono</label>            
+            <i class="gs-icon-left glyphicon glyphicon-phone-alt" aria-hidden="true" [ngClass]="{'gs-error': um.validations.tel}"></i>
+            <i class="gs-icon-right glyphicon glyphicon-ok" aria-hidden="true" *ngIf="showTelOk"></i>
+            <i class="gs-icon-right glyphicon glyphicon-remove" aria-hidden="true" *ngIf="showTelRemove"></i>
+            <small class="gs-span-underscored" *ngIf="formErrors.tel">{{ formErrors.tel }}</small>
+        </div>
+        <br>
+        <div class="form-group text-center">
+            <button type="button" class="btn btn-sm btn-default gs-flat" routerLink="/home">
+                Cancelar
+            </button>
+            <button type="button" class="btn btn-sm btn-success gs-flat" [disabled]="!createForm.valid">
+                Guardar             
+            </button>
+        </div>
+    </form>
+</div>

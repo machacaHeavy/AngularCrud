@@ -9,7 +9,7 @@ import 'rxjs/observable/throw';
 @Injectable()
 export class LayoutService {
 
-  constructor( private http: Http) { }
+  constructor( private http: Http) { console.log('LayoutService instance...');}
 
   getInfo(){
     return this.http.get(environment.infoResource)

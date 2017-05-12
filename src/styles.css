@@ -1,4 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* 
+-----------------------------------------------------------------
+Layout custom styles
+-----------------------------------------------------------------
+*/
 .logo-mini>img{
     width:50px;
     height:50px;
@@ -41,11 +45,121 @@
     color: gray !important;
    
 }
+
+/*
+------------------------------------------------------------
+General error styles
+------------------------------------------------------------
+*/
+
 .has-error{
     border-color: #E23237;
     background-color: rgba(244, 66, 66,0.1);
-    
 }
 .has-error:focus{
     border-color: #E23237;
+}
+.gs-has-error{
+    border-bottom-color: rgba(244, 66, 66,0.8) !important;
+}
+.gs-error{
+    color: rgba(244, 66, 66,0.8) !important;
+}
+/*
+-------------------------------------------------------------
+underscored-flat styles
+-------------------------------------------------------------
+*/
+.gs-input-group{
+    position:relative;
+    color: rgba(0,0,0,0.7);
+}
+.gs-input-group>.glyphicon-ok{
+    color: rgba(0,0,0,0.7) !important;
+}
+.gs-input-group>.glyphicon-remove{
+    color:rgba(244, 66, 66,0.8) !important;
+}
+.gs-icon-right{
+    position:absolute;
+    display:block;
+    line-height: 34px;
+    top:0px;
+    right:0px;
+    width: 34px;
+    text-align: center;
+    z-index: 3;
+    color: rgba(0,0,0,0.7);
+    transition: color .7s;
+}
+.gs-icon-left{
+    position:absolute;
+    display:block;
+    line-height: 34px;
+    top:0px;
+    left:0px;
+    width: 34px;
+    text-align: center;
+    z-index: 3;
+    color: rgba(0,0,0,0.7);
+    transition: color .7s;
+}
+.gs-input-underscored{
+    border:none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: border-bottom 1s;
+    background-color: transparent;
+    z-index: 3;
+    padding:0px !important;
+    margin-left: 35px;
+    margin-right: 35px;
+    width: calc(100% - 70px) !important;
+}
+.gs-input-underscored:focus ~ .gs-icon-left{
+    color:rgb(46, 94, 186);
+}
+.gs-input-underscored:focus ~ .gs-icon-right.glyphicon-ok{
+    color:rgb(46, 94, 186) !important;
+}
+.gs-input-underscored:focus + .gs-label-underscored{
+    transform: translateY(-20px);
+    color: rgb(46, 94, 186);
+}
+
+.gs-input-underscored-focused{
+    transform: translateY(-20px);
+    color:rgb(46, 94, 186);
+}
+.gs-label-underscored{
+    position:absolute;
+    cursor: text;
+    display:block;
+    line-height: 34px;
+    left:35px;
+    top:0px;
+    text-align: center;
+    z-index: 5;
+    color: rgba(0,0,0,0.7);
+    transition: color .7s, transform .7s;
+}
+
+.gs-flat{
+    border-radius:0px !important;
+}
+.gs-shadow{
+    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.1);
+}
+.gs-span-underscored{
+    margin-left: 35px;
+    margin-right: 35px;
+
+    color: rgba(244, 66, 66,0.8);
+}
+/*
+---------------------------------------------------------
+Messages styles
+---------------------------------------------------------
+*/
+.gs-small-messages{
+    color: rgba(0,0,0,0.5);
 }

@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'gs-app',
   template: `
     <router-outlet></router-outlet>
+    
   `,
   styles: [``]
 })
@@ -13,6 +14,7 @@ export class AppComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

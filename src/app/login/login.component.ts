@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
       this.formErrors[field] = '';
       const control = this.loginForm.get(field);
 
-      if ( control && control.dirty && !control.valid && control.value != '' ){
+      if ( control && control.dirty && !control.valid && (control.value != '' || control.value != null) ){
         
         const messages = this.validationMessages[field];
 
