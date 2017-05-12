@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { LoginService } from './login.service';
+import { AuthService } from './../core/services/auth.service';
 
 @Component({
   selector: 'gs-login',
@@ -21,6 +21,7 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
 
+  routeAnimation: boolean = true;
   loginForm: FormGroup;
   formErrors: any = {
     'user' : ''
@@ -33,7 +34,7 @@ export class LoginComponent implements OnInit {
   };
 
 
-  constructor(private ls: LoginService, private router:Router, private fb: FormBuilder) {}
+  constructor(private ls: AuthService, private router:Router, private fb: FormBuilder) {}
 
   ngOnInit() {
     this.buildForm();
