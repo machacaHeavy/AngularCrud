@@ -3,6 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AuthService } from './../core/services/auth.service';
+import { fadeInAnimation } from './../shared/animations';
+
+declare var $:any;
 
 @Component({
   selector: 'gs-login',
@@ -17,10 +20,12 @@ import { AuthService } from './../core/services/auth.service';
       border:1px solid rgba(0,0,0,0.1);
       border-radius:5px;
     }
-  `]
+  `],
+  animations: [ fadeInAnimation ]
 })
 export class LoginComponent implements OnInit {
 
+  userLabel: boolean = false;
   routeAnimation: boolean = true;
   loginForm: FormGroup;
   formErrors: any = {
@@ -35,6 +40,11 @@ export class LoginComponent implements OnInit {
 
 
   constructor(private ls: AuthService, private router:Router, private fb: FormBuilder) {}
+
+
+  validateLabel(id){
+    $('#'+id).focus();
+  }
 
   ngOnInit() {
     this.buildForm();
@@ -51,18 +61,19 @@ export class LoginComponent implements OnInit {
   }
   
   onValueChanged(data){
+    this.userLabel  = (this.loginForm.controls['user'].value != null && this.loginForm.controls['user'].value != '');
     if ( !this.loginForm ){ return; }
 
     for ( const field in this.formErrors ){
       this.formErrors[field] = '';
       const control = this.loginForm.get(field);
 
-      if ( control && control.dirty && !control.valid && (control.value != '' || control.value != null) ){
+      if ( control && control.dirty && !control.valid && control.value != '' && control.value != null ){
         
         const messages = this.validationMessages[field];
 
         for ( const key in control.errors ){
-          this.formErrors[field] += messages[key] + ' ';
+          this.formErrors[field] = messages[key];
         }
       }
 

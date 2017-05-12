@@ -81,7 +81,9 @@ gs-skin-black
 .gs-skin-black .main-header .navbar .sidebar-toggle:hover{
     background-color: #2C3B41 !important;
 }
-
+.gs-skin-black .main-header li.user-header{
+    background-color: #222D32 !important;
+}
 /*
 ------------------------------------------------------------
 General error styles
@@ -150,6 +152,7 @@ underscored-flat styles
     margin-left: 35px;
     margin-right: 35px;
     width: calc(100% - 70px) !important;
+    
 }
 .gs-input-underscored:focus ~ .gs-icon-left{
     color:rgb(46, 94, 186);
@@ -177,6 +180,9 @@ underscored-flat styles
     z-index: 5;
     color: rgba(0,0,0,0.7);
     transition: color .7s, transform .7s;
+    font-weight: normal !important;
+    font-style: oblique;
+    font-size: 15px;
 }
 
 .gs-flat{

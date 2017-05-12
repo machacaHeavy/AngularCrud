@@ -1,19 +1,20 @@
-<div class="login-container" [@routeAnimation] = "routeAnimation" >
+<div class="login-container gs-shadow" [@routeAnimation] = "routeAnimation" >
     <form role="form" [formGroup] ="loginForm" (ngSubmit) = "submit()">
-        <div class="form-group">
+        <div class="form-group text-center">
             <h3>Iniciar Sesi&oacute;n</h3>
         </div>
         
-        <div class="input-group">
-            <div class="input-group-addon"><i class="glyphicon glyphicon-user"></i></div>
-            <input type="text" class="form-control" placeholder="Usuario" formControlName="user" gs-string> 
+        <div class="gs-input-group">
+            <input type="text" class="form-control gs-input-underscored" formControlName="user" gs-string id="user" autocomplete="off"> 
+            <label class="gs-label-underscored" (click)="validateLabel('user')" [ngClass]="{'gs-input-underscored-focused': userLabel, 'gs-error': userError}">
+                Introduzca su usuario
+            </label>
+            <small class="gs-span-underscored" *ngIf="formErrors.user">{{ formErrors.user }}</small>
         </div>
-        <div *ngIf="formErrors.user">
-            <small>{{ formErrors.user }}</small>
-        </div>
+    
         <br>
-        <div class="form-group">
-            <button type="submit" [disabled]="!loginForm.valid" class="btn btn-success">Entrar</button>
+        <div class="form-group text-center">
+            <button type="submit" [disabled]="!loginForm.valid" class="btn btn-success gs-flat">Entrar</button>
         </div>
     </form>
    

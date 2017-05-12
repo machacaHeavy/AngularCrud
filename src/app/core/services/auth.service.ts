@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService {
 
-  constructor() { }
+  constructor() { console.log('AuthService instance...'); }
 
   loggIn(user){
     localStorage.setItem('id_session', user);
