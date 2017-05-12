@@ -24,6 +24,7 @@ Layout custom styles
 .skin-purple .sidebar-menu > li:hover > a{
     -webkit-transition: border-left-color 1s, color 1s, border-left-width 1s;
 }
+
 .user-panel>.info{
     line-height: 3;
 }
@@ -44,6 +45,41 @@ Layout custom styles
     content: "/\A0" !important;
     color: gray !important;
    
+}
+/*
+-----------------------------------------------------------
+gs-skin-black
+-----------------------------------------------------------
+*/
+.gs-skin-black .main-header>.logo {
+    background-color: #222D32 !important;
+    color: #FFF !important;
+    border-right: 1px solid #222D32;
+}
+.gs-skin-black .main-header .navbar{
+    background-color: #222D32 !important;
+}
+.gs-skin-black .main-header .navbar>.sidebar-toggle{
+    color: #FFF !important;
+    border-right: 1px solid #222D32 !important;
+}
+.gs-skin-black .main-header .navbar .navbar-custom-menu .navbar-nav>li>a, .gs-skin-black .main-header .navbar .navbar-right>li>a{
+    border-left: 1px solid #222D32 !important;
+}
+.gs-skin-black .main-header .navbar .nav>li>a{
+    color: #FFF !important;
+}
+.gs-skin-black .main-header .navbar .nav>li>a:hover, 
+.gs-skin-black .main-header .navbar .nav>li>a:active, 
+.gs-skin-black .main-header .navbar .nav>li>a:focus, 
+.gs-skin-black .main-header .navbar .nav .open>a, 
+.gs-skin-black .main-header .navbar .nav .open>a:hover, 
+.gs-skin-black .main-header .navbar .nav .open>a:focus, 
+.gs-skin-black .main-header .navbar .nav>.active>a{
+    background-color: #2C3B41 !important;
+}
+.gs-skin-black .main-header .navbar .sidebar-toggle:hover{
+    background-color: #2C3B41 !important;
 }
 
 /*

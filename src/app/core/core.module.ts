@@ -9,7 +9,6 @@ import { MainContentComponent } from './layout/main-content/main-content.compone
 import { FooterComponent } from './layout/footer/footer.component';
 import { LayoutComponent } from './layout/layout.component';
 import { LayoutService } from './layout/layout.service';
-import { LoginService } from '../login/login.service';
 
 @NgModule({
   imports: [ 
@@ -24,7 +23,7 @@ import { LoginService } from '../login/login.service';
     FooterComponent,
     LayoutComponent
   ],
-  providers: [ LayoutService, LoginService ],
+  providers: [ LayoutService ],
   exports: [ LayoutComponent ]
 
 })

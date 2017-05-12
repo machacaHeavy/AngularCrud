@@ -14,8 +14,9 @@ const appRoutes: Routes = [
       { path: 'about', loadChildren: './about/about.module#AboutModule' }
     ]
   },
-  { path: 'login', loadChildren: './login/login.module#LoginModule' },
-  { path: '404', loadChildren: './notfound/notfound.module#NotfoundModule',  },
+  { path: 'login', loadChildren: './auth/auth.module#AuthModule' },
+  { path: 'logout', loadChildren: './auth/auth.module#AuthModule'},
+  { path: '404', loadChildren: './notfound/notfound.module#NotfoundModule' },
   { path: '**', redirectTo: '404' }
 ];
 
