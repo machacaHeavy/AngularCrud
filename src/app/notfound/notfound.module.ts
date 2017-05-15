@@ -10,4 +10,4 @@ import { NotfoundComponent } from './notfound.component';
   imports: [ SharedModule, NotfoundRoutingModule ],
   declarations: [NotfoundComponent]
 })
-export class NotfoundModule {}
+export class NotfoundModule { }

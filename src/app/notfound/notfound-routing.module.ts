@@ -11,4 +11,4 @@ const notfoundRoutes: Routes = [
   imports: [ RouterModule.forChild(notfoundRoutes) ],
   exports: [ RouterModule ]
 })
-export class NotfoundRoutingModule {}
+export class NotfoundRoutingModule { }

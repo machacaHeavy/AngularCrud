@@ -39,7 +39,7 @@
     }
   ],
   "e2e": {
-    "protractor": {
+    "protractor":{
       "config": "./protractor.conf.js"
     }
   },

@@ -8,13 +8,13 @@ import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [ 
-    BrowserModule, 
+  imports: [
+    BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     CoreModule
   ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule {}
+export class AppModule { }
