@@ -2,15 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './about.component';
-import { AuthGuard } from './../shared/guards/auth.guard';
+import { AuthGuard } from './../shared/guards';
 
 const aboutRoutes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     children: [
       { path: '', component: AboutComponent }
     ],
-    canActivate: [ AuthGuard ]   
+    canActivate: [ AuthGuard ]
   }
 ];
 

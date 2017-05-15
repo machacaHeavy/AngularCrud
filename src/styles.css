@@ -92,11 +92,11 @@ General error styles
 */
 
 .has-error{
-    border-color: #E23237;
-    background-color: rgba(244, 66, 66,0.1);
+    border-color: #E23237 !important;
+    background-color: rgba(244, 66, 66,0.1) !important;
 }
 .has-error:focus{
-    border-color: #E23237;
+    border-color: #E23237 !important;
 }
 .gs-has-error{
     border-bottom-color: rgba(244, 66, 66,0.8) !important;
@@ -144,9 +144,14 @@ underscored-flat styles
     transition: color .7s;
 }
 .gs-input-underscored{
+    display: block;
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
     border:none;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    transition: border-bottom .5s;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    transition: border-color .5s;
     background-color: transparent;
     z-index: 3;
     padding:0px !important;
@@ -154,6 +159,10 @@ underscored-flat styles
     margin-right: 35px;
     width: calc(100% - 70px) !important;
 
+}
+.gs-input-underscored:focus{
+    outline: 0;
+    border-color:rgb(46, 94, 186);
 }
 .gs-input-underscored:focus ~ .gs-icon-left{
     color:rgb(46, 94, 186);
@@ -166,7 +175,7 @@ underscored-flat styles
     color: rgb(46, 94, 186);
 }
 
-.gs-input-underscored-focused{
+.gs-label-underscored-focused{
     transform: translateY(-20px);
     color:rgb(46, 94, 186);
 }
