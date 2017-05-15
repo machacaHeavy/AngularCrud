@@ -145,7 +145,7 @@ underscored-flat styles
 .gs-input-underscored{
     border:none;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    transition: border-bottom 1s;
+    transition: border-bottom .5s;
     background-color: transparent;
     z-index: 3;
     padding:0px !important;
@@ -179,7 +179,7 @@ underscored-flat styles
     text-align: center;
     z-index: 5;
     color: rgba(0,0,0,0.7);
-    transition: color .7s, transform .7s;
+    transition: color .5s, transform .5s;
     font-weight: normal !important;
     font-style: oblique;
     font-size: 15px;
