@@ -1,4 +1,4 @@
-/* 
+/*
 -----------------------------------------------------------------
 Layout custom styles
 -----------------------------------------------------------------
@@ -7,6 +7,7 @@ Layout custom styles
     width:50px;
     height:50px;
 }
+
 .content-header>.breadcrumb{
     float:none;
     right:0px;
@@ -44,7 +45,7 @@ Layout custom styles
 .content-header>.breadcrumb>li+li:before{
     content: "/\A0" !important;
     color: gray !important;
-   
+
 }
 /*
 -----------------------------------------------------------
@@ -69,12 +70,12 @@ gs-skin-black
 .gs-skin-black .main-header .navbar .nav>li>a{
     color: #FFF !important;
 }
-.gs-skin-black .main-header .navbar .nav>li>a:hover, 
-.gs-skin-black .main-header .navbar .nav>li>a:active, 
-.gs-skin-black .main-header .navbar .nav>li>a:focus, 
-.gs-skin-black .main-header .navbar .nav .open>a, 
-.gs-skin-black .main-header .navbar .nav .open>a:hover, 
-.gs-skin-black .main-header .navbar .nav .open>a:focus, 
+.gs-skin-black .main-header .navbar .nav>li>a:hover,
+.gs-skin-black .main-header .navbar .nav>li>a:active,
+.gs-skin-black .main-header .navbar .nav>li>a:focus,
+.gs-skin-black .main-header .navbar .nav .open>a,
+.gs-skin-black .main-header .navbar .nav .open>a:hover,
+.gs-skin-black .main-header .navbar .nav .open>a:focus,
 .gs-skin-black .main-header .navbar .nav>.active>a{
     background-color: #2C3B41 !important;
 }
@@ -152,7 +153,7 @@ underscored-flat styles
     margin-left: 35px;
     margin-right: 35px;
     width: calc(100% - 70px) !important;
-    
+
 }
 .gs-input-underscored:focus ~ .gs-icon-left{
     color:rgb(46, 94, 186);
