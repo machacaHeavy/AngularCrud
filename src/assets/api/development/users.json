@@ -1,0 +1,34 @@
+{
+  "error": false,
+  "msj": "Lista de usuarios",
+  "result": [
+    {
+    "idu_usuario": 2,
+    "nom_usuario": "Jose6",
+    "des_correo": "gil@coppe.com",
+    "num_telefono": "445543332",
+    "opc_estatus": true
+    },
+    {
+    "idu_usuario": 4,
+    "nom_usuario": "Jose6",
+    "des_correo": "gil@coppe.com",
+    "num_telefono": "445543332",
+    "opc_estatus": true
+    },
+    {
+    "idu_usuario": 5,
+    "nom_usuario": "Jose6",
+    "des_correo": "gil@coppe.com",
+    "num_telefono": "445543332",
+    "opc_estatus": true
+    },
+    {
+    "idu_usuario": 6,
+    "nom_usuario": "Jose6",
+    "des_correo": "gil@coppe.com",
+    "num_telefono": "445543332",
+    "opc_estatus": true
+    }
+  ]
+}

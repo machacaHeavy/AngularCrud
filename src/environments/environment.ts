@@ -7,7 +7,7 @@ export const environment = {
   production: false,
   infoResource: './../../../assets/api/development/info.json',
   menuResource: './../../../assets/api/development/menu.json',
-  usersResource: 'http://localhost:8080/slim-eloquent/user',
+  usersResource:'./../../../assets/api/development/users.json',
   sessionName: 'id_session'
 };
 

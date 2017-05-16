@@ -2,6 +2,6 @@ export const environment = {
   production: true,
   infoResource: 'assets/api/production/info.json',
   menuResource: 'assets/api/production/menu.json',
-  usersResource: 'http://localhost:8080/slim-eloquent/user',
+  usersResource: 'assets/api/production/users.json',
   sessionName: 'id_session'
 };
